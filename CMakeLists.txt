@@ -147,6 +147,18 @@ asap_library(
   ${libraries}
 )
 
+# Handle custom installation of specific include headers
+install(
+  FILES
+  ${CMAKE_CURRENT_SOURCE_DIR}/imgui/imconfig.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_internal.h
+  DESTINATION
+  ${INSTALL_INCLUDE}/imgui
+  COMPONENT
+  dev
+  )
+
 
 # ------------------------------------------------------------------------------
 # Tests

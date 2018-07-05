@@ -35,8 +35,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #endif
 
-#include "imgui.h"
-#include "imgui_impl_opengl3.h"
+#include <imgui/imgui.h>
+#include <glfw/imgui_impl_opengl3.h>
 // This example is using gl3w to access OpenGL functions. You may freely use any
 // other OpenGL loader such as: glew, glad, glLoadGen, etc.
 #include <glad/gl.h>

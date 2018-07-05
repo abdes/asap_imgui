@@ -2214,7 +2214,7 @@ typedef void (*GLADpostcallback)(void *ret, const char *name, GLADapiproc apipro
 
 
 #include <stddef.h>
-#include <KHR/khrplatform.h>
+#include <glad/khrplatform.h>
 #ifndef GLEXT_64_TYPES_DEFINED
 /* This code block is duplicated in glxext.h, so must be protected */
 #define GLEXT_64_TYPES_DEFINED

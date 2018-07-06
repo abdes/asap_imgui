@@ -27,15 +27,15 @@
 
 namespace ImGui {
 
-void ShutdownDock();
-void RootDock(const ImVec2 &pos, const ImVec2 &size);
-bool BeginDock(const char *label, bool *opened = nullptr,
-               ImGuiWindowFlags extra_flags = 0,
-               const ImVec2 &default_size = ImVec2(-1, -1));
-void EndDock();
-void SetDockActive();
-void SaveDock();
-void LoadDock();
-void PrintDocks();
+void IMGUI_API ShutdownDock();
+void IMGUI_API RootDock(const ImVec2 &pos, const ImVec2 &size);
+bool IMGUI_API BeginDock(const char *label, bool *opened = nullptr,
+                         ImGuiWindowFlags extra_flags = 0,
+                         const ImVec2 &default_size = ImVec2(-1, -1));
+void IMGUI_API EndDock();
+void IMGUI_API SetDockActive();
+void IMGUI_API SaveDock();
+void IMGUI_API LoadDock();
+void IMGUI_API PrintDocks();
 
 }  // namespace ImGui

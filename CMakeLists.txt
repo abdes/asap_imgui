@@ -116,7 +116,9 @@ set(include_dirs
 # Compile definitions / options
 # ------------------------------------------------------------------------------
 
-set(compile_definitions)
+set(compile_definitions
+  IMGUI_USER_CONFIG="../imgui_user_config.h"
+  )
 set(compile_options)
 
 # ------------------------------------------------------------------------------
@@ -146,6 +148,9 @@ asap_library(
   PUBLIC_LIBRARIES
   ${libraries}
 )
+
+# Add imgui include dir manually as it is special
+target_include_directories(${target} INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
 
 # Handle custom installation of specific include headers
 install(

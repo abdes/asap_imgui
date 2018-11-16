@@ -38,9 +38,9 @@ set(imgui_public_headers
 set(imgui_private_headers
   imgui/imgui_internal.h
   imgui/imconfig.h
-  imgui/imstb_rectpack.h
-  imgui/imstb_textedit.h
-  imgui/imstb_truetype.h
+  imgui/stb_rect_pack.h
+  imgui/stb_textedit.h
+  imgui/stb_truetype.h
   )
 
 set(imgui_sources

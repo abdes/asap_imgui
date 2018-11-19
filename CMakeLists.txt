@@ -150,6 +150,16 @@ asap_library(
   ${libraries}
 )
 
+# Add dll specific defines for glad
+target_compile_definitions(${target}
+  PRIVATE
+    $<$<BOOL:${BUILD_SHARED_LIBS}>:GLAD_GLAPI_EXPORT_BUILD>
+
+  PUBLIC
+    $<$<BOOL:${BUILD_SHARED_LIBS}>:GLAD_GLAPI_EXPORT>
+  )
+
+
 # Add imgui include dir manually as it is special
 target_include_directories(${target} INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
 

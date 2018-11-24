@@ -119,6 +119,7 @@ set(include_dirs
 
 set(compile_definitions
   IMGUI_USER_CONFIG="../imgui_user_config.h"
+  IMGUI_IMPL_OPENGL_LOADER_GLAD
   )
 set(compile_options)
 

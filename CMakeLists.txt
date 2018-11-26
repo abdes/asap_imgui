@@ -55,7 +55,7 @@ set(imgui_sources
 set(public_headers
   ${imgui_public_headers}
   include/glad/khrplatform.h
-  include/glad/gl.h
+  include/glad/glad.h
   )
 
 set(private_headers

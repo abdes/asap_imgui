@@ -54,8 +54,8 @@ set(imgui_sources
 
 set(public_headers
   ${imgui_public_headers}
-  include/glad/khrplatform.h
-  include/glad/glad.h
+  include/KHR/khrplatform.h
+  include/glad/gl.h
   )
 
 set(private_headers
@@ -63,7 +63,7 @@ set(private_headers
   )
 
 set(sources
-  src/glad/glad.c
+  src/glad/gl.c
   src/glfw/imgui_impl_glfw.cpp
   src/glfw/imgui_impl_opengl3.cpp
   ${imgui_public_headers}

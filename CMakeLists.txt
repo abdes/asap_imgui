@@ -152,10 +152,10 @@ asap_library(
 # Add dll specific defines for glad
 target_compile_definitions(${target}
   PRIVATE
-    $<$<BOOL:${BUILD_SHARED_LIBS}>:GLAD_GLAPI_EXPORT_BUILD>
+  $<$<BOOL:${BUILD_SHARED_LIBS}>:GLAD_API_CALL_EXPORT_BUILD>
 
   PUBLIC
-    $<$<BOOL:${BUILD_SHARED_LIBS}>:GLAD_GLAPI_EXPORT>
+    $<$<BOOL:${BUILD_SHARED_LIBS}>:GLAD_API_CALL_EXPORT>
   )
 
 

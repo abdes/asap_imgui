@@ -33,6 +33,8 @@ message(STATUS "Lib ${target}")
 
 set(imgui_public_headers
   imgui/imgui.h
+  imgui/backends/imgui_impl_glfw.h
+  imgui/backends/imgui_impl_opengl3.h
   )
 
 set(imgui_private_headers
@@ -46,8 +48,11 @@ set(imgui_private_headers
 set(imgui_sources
   imgui/imgui.cpp
   imgui/imgui_widgets.cpp
+  imgui/imgui_tables.cpp
   imgui/imgui_draw.cpp
   imgui/imgui_demo.cpp
+  imgui/backends/imgui_impl_glfw.cpp
+  imgui/backends/imgui_impl_opengl3.cpp
   ${imgui_public_headers}
   ${imgui_private_headers}
   )
@@ -64,8 +69,6 @@ set(private_headers
 
 set(sources
   src/glad/gl.cpp
-  src/glfw/imgui_impl_glfw.cpp
-  src/glfw/imgui_impl_opengl3.cpp
   ${imgui_public_headers}
   ${imgui_private_headers}
   ${imgui_sources}
@@ -107,6 +110,7 @@ source_group(${source_group}
 
 set(include_dirs
   ${CMAKE_CURRENT_LIST_DIR}
+  ${CMAKE_CURRENT_LIST_DIR}/imgui
   ${CMAKE_CURRENT_LIST_DIR}/include
   ${CMAKE_SOURCE_DIR}/third_party/glfw/include
   )

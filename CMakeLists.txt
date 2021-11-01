@@ -207,8 +207,10 @@ configure_doxyfile(${target}
 
 add_doxygen_target(${target})
 
-install(
-  DIRECTORY ${DOXYGEN_BUILD_DIR}/${target}
-  DESTINATION ${INSTALL_DOC}
-  COMPONENT docs
-)
+if(SPHINX_FOUND)
+  install(
+    DIRECTORY ${SPHINX_BUILD_DIR}/${target}
+    DESTINATION ${INSTALL_DOC}
+    COMPONENT docs
+  )
+endif()
